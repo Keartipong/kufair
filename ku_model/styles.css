@@ -1,0 +1,121 @@
+/* กำหนดสไตล์พื้นฐานสำหรับทั้งหน้าเว็บ */
+body {
+    font-family: Arial, sans-serif; /* กำหนดรูปแบบฟอนต์ */
+    margin: 0; /* กำหนดระยะห่างรอบขอบหน้าจอ */
+    padding: 0; /* กำหนดพื้นที่ว่างภายใน */
+    background-color: #f4f4f4; /* กำหนดสีพื้นหลัง */
+}
+
+/* กำหนดสไตล์สำหรับฟอร์ม */
+form {
+    width: 300px; /* กำหนดความกว้างของฟอร์ม */
+    margin: 50px auto; /* กำหนดการจัดวางให้อยู่ตรงกลาง */
+    padding: 20px; /* กำหนดพื้นที่ว่างภายในฟอร์ม */
+    background-color: #fff; /* กำหนดสีพื้นหลังของฟอร์ม */
+    box-shadow: 0px 0px 10px 0px #000; /* เพิ่มเงาให้กับฟอร์ม */
+    border-radius: 10px; /* กำหนดความโค้งของขอบฟอร์ม */
+}
+
+/* กำหนดสไตล์สำหรับหัวเรื่อง */
+h2 {
+    text-align: center; /* กำหนดการจัดวางให้อยู่ตรงกลาง */
+}
+
+/* กำหนดสไตล์สำหรับป้ายกำกับ (label) */
+label {
+    display: block; /* จัดวางให้ป้ายกำกับอยู่ในบรรทัดใหม่ */
+    margin-bottom: 10px; /* กำหนดระยะห่างด้านล่าง */
+    font-weight: bold; /* กำหนดความหนาของฟอนต์ */
+}
+
+/* กำหนดสไตล์สำหรับช่องกรอกข้อมูล */
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%; /* กำหนดความกว้างให้เต็มฟอร์ม */
+    padding: 8px; /* กำหนดพื้นที่ว่างภายในช่องกรอกข้อมูล */
+    margin-bottom: 10px; /* กำหนดระยะห่างด้านล่าง */
+    border-radius: 5px; /* กำหนดความโค้งของขอบช่องกรอกข้อมูล */
+    border: 1px solid #ccc; /* กำหนดสีและความหนาของขอบ */
+}
+
+/* กำหนดสไตล์สำหรับปุ่ม */
+button {
+    width: 100%; /* กำหนดความกว้างให้เต็มฟอร์ม */
+    padding: 10px; /* กำหนดพื้นที่ว่างภายในปุ่ม */
+    background-color: #007bff; /* กำหนดสีพื้นหลังของปุ่ม */
+    border: none; /* ลบขอบปุ่ม */
+    border-radius: 5px; /* กำหนดความโค้งของขอบปุ่ม */
+    color: white; /* กำหนดสีข้อความในปุ่ม */
+    font-weight: bold; /* กำหนดความหนาของฟอนต์ */
+}
+
+/* กำหนดสไตล์สำหรับข้อความในฟอร์ม */
+p {
+    text-align: center; /* กำหนดการจัดวางให้อยู่ตรงกลาง */
+}
+
+/* Transition effect for dropdowns */
+.form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8; /* Initial opacity */
+}
+
+.form-control.show {
+    opacity: 1; /* Full opacity when active */
+}
+.modal-header {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-header:hover {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #28a745;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite, pulse 1.5s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.btn-custom:focus, .btn-custom:active {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.fab:active {
+    transform: scale(0.9);
+    background: #218838;
+}
+
+.background-overlay {
+    animation: backgroundOverlayAnimation 20s linear infinite;
+}
+
+@keyframes backgroundOverlayAnimation {
+    0% { opacity: 0.4; }
+    50% { opacity: 0.6; }
+    100% { opacity: 0.4; }
+}
+
+.tooltip-inner {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.tooltip-inner.show {
+    opacity: 1;
+}
+
